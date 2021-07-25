@@ -41,7 +41,6 @@ public class GameOfCard{
 			Deck[i]=Deck[index];
 			Deck[index]=temp;
 		}
-
 	}
 	/**
 	 * Stores shuffled deck array into 2D array
@@ -59,8 +58,5 @@ public class GameOfCard{
 			if((j+1)%3==0)
 				System.out.println();
 		}
-		
-}
-	
-	
+	}
 }
