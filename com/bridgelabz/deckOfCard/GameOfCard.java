@@ -1,8 +1,9 @@
+package com.bridgelabz.deckOfCard;
 /**
  * Purpose : Distribute 9 card of deck each four player by shuffling deck of card.
  * @author Ganesh Gavhad
  * @Version 1.0
- * @Since 11-06-2021
+ * @Since 25-07-2021
  *
  */
 import java.util.Random;
@@ -26,7 +27,6 @@ public class GameOfCard{
 		for (int i=0; i<Deck.length;i++) {
 			
 			Deck[i]=suit[i/13]+"-"+rank[i%13];	
-
 		}
 	}
 
@@ -36,10 +36,10 @@ public class GameOfCard{
 	public void shuffleCard() {
 		Random random = new Random ();
 		for(int i=0; i<Deck.length;i++) {
-			int Shuffle=random.nextInt(52);
+			int index =random.nextInt(52);
 			String temp = Deck[i];
-			Deck[i]=Deck[Shuffle];
-			Deck[Shuffle]=temp;
+			Deck[i]=Deck[index];
+			Deck[index]=temp;
 		}
 
 	}
@@ -53,7 +53,7 @@ public class GameOfCard{
 			for(int k=0;k<3;k++)
 			{	
 				ShuffleDeck[j][k]=Deck[(k*10)+j];
-				System.out.print(ShuffleDeck[j][k]+"  ");
+				System.out.print(ShuffleDeck[j][k]+"  ||  ");
 			}
 			System.out.println();
 			if((j+1)%3==0)
